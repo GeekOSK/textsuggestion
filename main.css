@@ -1,0 +1,176 @@
+/*Textbox Styling*/
+.input-group{
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/*Input Styling*/
+input{
+  font-size: inherit;
+  font-family: inherit;
+  padding: 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: 300;
+  color:#fff;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  word-break:normal!important;
+}
+input::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.4);
+}
+input::-moz-placeholder {
+  color: rgba(255,255,255,0.4);
+}
+input:-ms-input-placeholder {
+  color: rgba(255,255,255,0.4);
+}
+input:-moz-placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+/*Bar below the Input*/
+.bar{
+  height:1px;
+  width:100%;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+.bar > .focus-bar{
+  height: 1px;
+  margin-top: 1px;
+  background: rgba(255,255,255,0.5);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+input:focus ~ .bar > .focus-bar{
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  background: #fff;
+  height: 2px;
+}
+
+/*Message Below the Input*/
+.message p {
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+}
+.message .replacer {
+  color: #FFEB3B;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  visibility: visible;
+  display: inline-block;
+  lines:1;
+  padding: 5px;
+}
+
+/*Animation Changes*/
+input.textbox-mode{
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+.message .replacer.textbox-mode{
+  position: absolute;
+  color:#fff;
+  font-weight: 300;
+  font-size: 26px;
+  z-index: 5;
+  background: transparent
+}
+.message .replacer.hide{
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  visibility: hidden;
+}
+/*Negligible Polishes*/
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+body{
+  padding:0;
+  margin:0;
+  background: #eee;
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
+  background: #7B1FA2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.credit{
+  position: absolute;
+  bottom:0; left:0;
+  padding: 15px;
+  color: rgba(0,0,0,0.7);
+  z-index: 100;
+  font-weight: 300;
+  background: #fff;
+}
+.credit a{
+  color: rgba(80, 150, 255, 1);
+  text-decoration: none;
+  font-weight: 400;
+}
+/*Reset Button*/
+.reset-btn{
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  border:none;
+  background: transparent;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  color:#fff;
+  position: absolute;
+  margin:10px;
+  right:0; top:0;
+  outline: none;
+}
+.reset-btn:hover{
+  background: rgba(255,255,255,0.1);
+}
+.reset-btn:active{
+  background: rgba(255,255,255,0.2);
+}
